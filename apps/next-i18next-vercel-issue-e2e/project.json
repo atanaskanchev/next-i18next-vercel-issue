@@ -1,0 +1,28 @@
+{
+  "root": "apps/next-i18next-vercel-issue-e2e",
+  "sourceRoot": "apps/next-i18next-vercel-issue-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/next-i18next-vercel-issue-e2e/cypress.json",
+        "devServerTarget": "next-i18next-vercel-issue:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "next-i18next-vercel-issue:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/next-i18next-vercel-issue-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["next-i18next-vercel-issue"]
+}

@@ -1,0 +1,56 @@
+{
+  "root": "apps/next-i18next-vercel-issue",
+  "sourceRoot": "apps/next-i18next-vercel-issue",
+  "projectType": "application",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/next:build",
+      "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
+      "options": {
+        "root": "apps/next-i18next-vercel-issue",
+        "outputPath": "dist/apps/next-i18next-vercel-issue"
+      },
+      "configurations": {
+        "production": {}
+      }
+    },
+    "serve": {
+      "executor": "@nrwl/next:server",
+      "options": {
+        "buildTarget": "next-i18next-vercel-issue:build",
+        "dev": true
+      },
+      "configurations": {
+        "production": {
+          "buildTarget": "next-i18next-vercel-issue:build:production",
+          "dev": false
+        }
+      }
+    },
+    "export": {
+      "executor": "@nrwl/next:export",
+      "options": {
+        "buildTarget": "next-i18next-vercel-issue:build:production"
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/apps/next-i18next-vercel-issue"],
+      "options": {
+        "jestConfig": "apps/next-i18next-vercel-issue/jest.config.js",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": [
+          "apps/next-i18next-vercel-issue/**/*.{ts,tsx,js,jsx}"
+        ]
+      }
+    }
+  },
+  "tags": []
+}

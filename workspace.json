@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "next-i18next-vercel-issue": "apps/next-i18next-vercel-issue",
+    "next-i18next-vercel-issue-e2e": "apps/next-i18next-vercel-issue-e2e"
+  }
+}
