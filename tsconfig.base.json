@@ -14,7 +14,11 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@next-i18next-vercel-issue/ui/home-page": [
+        "libs/ui/home-page/src/index.ts"
+      ]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
