@@ -6,7 +6,7 @@ export function Index() {
   return <UiHomePage />;
 }
 
-export async function getStaticProps({ locale }) {
+export async function getServerSideProps({ locale }) {
   const sst = await serverSideTranslations(locale, ['common'], i18nextConf);
 
   console.log({
